@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="@dimen/padding_screen">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/AppTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to EnerLink"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_marginBottom="@dimen/margin_between" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                style="@style/Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bluetooth + BLE based communication"
+                android:layout_marginBottom="@dimen/margin_section" />
+
+            <!-- Privacy Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3e4d7"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/margin_section"
+                android:elevation="2dp">
+
+                <TextView
+                    style="@style/BoldBodyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Privacy is Protected"
+                    android:layout_marginBottom="@dimen/margin_between" />
+
+                <TextView
+                    style="@style/BodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• EnerLink does not track you or collect personal data\n• No servers or internet required\n• Location access is only used by Android for BLE\n• Messages stay on device and peers only" />
+            </LinearLayout>
+
+            <!-- Permissions Info -->
+            <TextView
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To work properly, EnerLink needs these permissions:"
+                android:layout_marginBottom="@dimen/margin_between" />
+
+            <!-- Permissions Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/margin_section">
+
+                <!-- Nearby Devices -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f3e4d7"
+                    android:padding="@dimen/card_padding"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/margin_between">
+
+                    <TextView
+                        style="@style/BoldBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nearby Devices" />
+
+                    <TextView
+                        style="@style/BodyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Needed to discover and connect to other users via BLE and Bluetooth." />
+                </LinearLayout>
+
+                <!-- Precise Location -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f3e4d7"
+                    android:padding="@dimen/card_padding"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/margin_between">
+
+                    <TextView
+                        style="@style/BoldBodyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precise Location" />
+
+                    <TextView
+                        style="@style/BodyText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Required by Android for BLE scanning.\n EnerLink does NOT use GPS or track location." />
+                </LinearLayout>
+
+                <!-- Notifications -->
+
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/btnGrantPermissions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grant Permissions"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:backgroundTint="#007F00"
+                android:layout_marginBottom="@dimen/margin_between" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exit App"
+                android:textColor="#333333"
+                 />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

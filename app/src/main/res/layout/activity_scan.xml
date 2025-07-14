@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_screen">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bluetooth Devices List"
+                android:padding="@dimen/padding_large" />
+
+            <!-- Nearby Devices -->
+            <TextView
+                android:id="@+id/tvNearbyTitle"
+                style="@style/SectionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nearby Devices" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNearbyDevices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- Paired Devices -->
+            <TextView
+                android:id="@+id/tvPairedTitle"
+                style="@style/SectionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paired Devices" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPairedDevices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="@dimen/padding_small"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Group Button -->
+    <ImageButton
+        android:id="@+id/btnCreateGroup"
+        android:layout_width="@dimen/btn_fab_size"
+        android:layout_height="@dimen/btn_fab_size"
+        android:layout_margin="@dimen/btn_fab_margin"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/bg_button_outline"
+        android:src="@drawable/outline_contacts_product_24"
+        android:contentDescription="Create Group"
+        android:padding="@dimen/padding_medium"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
