@@ -19,10 +19,6 @@ It works entirely offline and does not require an internet connection.
 - Once connected, a socket-based stream allows for real-time message exchange.
 - Messages are sent using `BluetoothSocket` and displayed on the UI using a `RecyclerView`.
 
-## Screenshots
-
-![WhatsApp Image 2025-07-14 at 13 33 35_1e90bf60](https://github.com/user-attachments/assets/0fdb9a88-d2f2-4f3e-babe-695648e692d4)
-
 ## Prerequisites
 
 - Android device with Bluetooth capability
